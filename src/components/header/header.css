@@ -1,0 +1,33 @@
+img{
+    height: 8vh;
+    width: 8vh;
+}
+.CustomText{
+    color: #FA615B;
+}
+li{
+    text-transform: capitalize;
+    /* color: #FA615B; */
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+li:hover{
+    transform: scale(1.1);
+}
+li::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #FA615B;
+    transition: width 0.4s ease-in-out;
+}
+li:hover::before {
+    width: 100%;
+}
+.acctive{
+    color:rgb(0, 0, 0) !important;
+}

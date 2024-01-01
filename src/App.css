@@ -1,0 +1,21 @@
+.Cbg{
+  background-color: #fbab24;
+}
+.Ctext{
+  color: #6b4400;
+}
+.CbuttonColor{
+  background-color: #b47301;
+}
+.CbuttonColor:hover{
+  background-color: #d98b06;
+}
+.CbuttonColor:active{
+  background-color: #b47409;
+}
+.Cborder{
+  border-color: #6b4400;
+}
+.fflex{
+  display: flex;
+}
