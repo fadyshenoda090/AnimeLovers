@@ -3,7 +3,27 @@ img{
     width: 8vh;
 }
 .CustomText{
-    color: #FA615B;
+    color: #FA7949;
+}
+.bg-glass{
+    background: linear-gradient(225deg, rgba(255, 255, 255, 0.473), rgba(105, 63, 63, 0.473));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    /* border-radius: 20px; */
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+.btn-glass{
+    background: linear-gradient(225deg, rgba(255, 255, 255, 0.753), rgba(255, 166, 2, 0.884));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    /* border-radius: 200px; */
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+.bg-collapse{
+    color: black;
+    background: linear-gradient(225deg, rgba(255, 255, 255, 0.753), rgba(255, 166, 2, 0.884));
 }
 li{
     text-transform: capitalize;
@@ -22,7 +42,7 @@ li::before {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: #FA615B;
+    background-color: #030000;
     transition: width 0.4s ease-in-out;
 }
 li:hover::before {
@@ -30,4 +50,5 @@ li:hover::before {
 }
 .acctive{
     color:rgb(0, 0, 0) !important;
+    font-size: 1.3rem;
 }
