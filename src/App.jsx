@@ -10,6 +10,8 @@ import Contact from './pages/contact/Contact'
 import Favorites from './pages/favorites/Favorites'
 import NotFound from './pages/notFound/NotFound'
 import Home from './pages/home/Home'
+import { Provider } from 'react-redux'
+import  store  from './store/store'
 const router = createBrowserRouter([
   {
     path: '/',
@@ -34,7 +36,7 @@ function App() {
   return (
     <>
       <LanguageProvider value={{ language, setLanguage }}>
-      <RouterProvider router={router} />
+      <Provider store={store}><RouterProvider router={router} /></Provider>
       </LanguageProvider>
     </>
   )
