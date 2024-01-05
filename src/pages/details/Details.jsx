@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
+import axiosInstance from '../../axiosConfig/axios';
 
 const Details = () => {
     const { id } = useParams();
@@ -11,7 +12,8 @@ const Details = () => {
         async function getAnimeDetails() {
             try {
                 let res = await axiosInstance.get(`/anime/${id}`);
-                setAnime(res.data);
+                setAnime(res.data.data);
+                console.log(res.data.data);
             } catch (error) {
                 setError(error.message);
             } finally {
@@ -20,6 +22,7 @@ const Details = () => {
         }
         getAnimeDetails();
     }, [id]);
+
 
     if (loading) {
         return <p className='text-white'>Loading...</p>;
@@ -30,26 +33,20 @@ const Details = () => {
     }
     return (
         <>
-            <div className="card" style={{ width: '30%' }}>
+            <div className="card bg-glass m-auto text-dark mt-5" style={{ width: '30%' }}>
                 <img
                     style={{ height: '400px' }}
                     className="card-img-top"
-                    src={anime.entry.images.jpg.image_url}
-                    alt={anime.entry.title}
+                    src={anime.images.jpg?.image_url}
+                    alt={anime.title}
                 />
                 <div className="card-body">
-                    <h5 className="card-title">{anime.title}</h5>
+                    <h5 className="card-title text-center display-5">{anime.title}</h5>
                 </div>
-                <ul className="list-group list-group-flush">
-                    <li className="list-group-item">
-                        Episodes :{anime.episodes[0].title}
-                    </li>
-                    <li className='list-group list-group-flush'>
-                        Premium : {anime.episodes[0].premium}
-                    </li>
-                </ul>
+                    <p className="list-group-item">
+                        Episodes :{anime.episodes}
+                    </p>
             </div>;
-
         </>
     )
 }
