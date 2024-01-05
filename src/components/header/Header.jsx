@@ -38,10 +38,10 @@ const Header = () => {
   const items = <>
     <ul className='list-unstyled mt-4 fs-4'>
       <NavLink className={({ isActive }) => (isActive) ? 'acctive' : 'fs-5 CustomText'} onClick={handleClick} to="/"><li className='mx-2 my-2'>{language == 'en' ? localization.home.en : localization.home.ar}</li></NavLink>
-      <NavLink className={({ isActive }) => (isActive) ? 'acctive' : 'fs-5 CustomText'} onClick={handleClick} to="about"><li className='mx-2 my-2'>{language == 'en' ? localization.about.en : localization.about.ar}</li></NavLink>
-      <NavLink className={({ isActive }) => (isActive) ? 'acctive' : 'fs-5 CustomText'} onClick={handleClick} to="favorites"><li className='mx-2 my-2'>{language == 'en' ? localization.favorites.en : localization.favorites.ar}</li></NavLink>
-      <NavLink className={({ isActive }) => (isActive) ? 'acctive' : 'fs-5 CustomText'} onClick={handleClick} to="login"><li className='mx-2 my-2'>{language == 'en' ? localization.login.en : localization.login.ar}</li></NavLink>
-      <NavLink className={({ isActive }) => (isActive) ? 'acctive' : 'fs-5 CustomText'} onClick={handleClick} to="register"><li className='mx-2 my-2'>{language == 'en' ? localization.register.en : localization.register.ar}</li></NavLink>
+      <NavLink className={({ isActive }) => (isActive) ? 'acctive' : 'fs-5 CustomText'} onClick={handleClick} to="/about"><li className='mx-2 my-2'>{language == 'en' ? localization.about.en : localization.about.ar}</li></NavLink>
+      <NavLink className={({ isActive }) => (isActive) ? 'acctive' : 'fs-5 CustomText'} onClick={handleClick} to="/favorites"><li className='mx-2 my-2'>{language == 'en' ? localization.favorites.en : localization.favorites.ar}</li></NavLink>
+      <NavLink className={({ isActive }) => (isActive) ? 'acctive' : 'fs-5 CustomText'} onClick={handleClick} to="/login"><li className='mx-2 my-2'>{language == 'en' ? localization.login.en : localization.login.ar}</li></NavLink>
+      <NavLink className={({ isActive }) => (isActive) ? 'acctive' : 'fs-5 CustomText'} onClick={handleClick} to="/register"><li className='mx-2 my-2'>{language == 'en' ? localization.register.en : localization.register.ar}</li></NavLink>
     </ul>
   </>
 
@@ -64,10 +64,10 @@ const Header = () => {
       <div className="d-flex align-items-center">
         <ul className='list-unstyled mt-4 d-none d-md-flex d-lg-flex'>
           <NavLink className={({ isActive }) => (isActive) ? 'acctive' : 'fs-5 CustomText'} to="/"><li className='li mx-2'>{language == 'en' ? localization.home.en : localization.home.ar}</li></NavLink>
-          <NavLink className={({ isActive }) => (isActive) ? 'acctive' : 'fs-5 CustomText'} to="about"><li className='li mx-2'>{language == 'en' ? localization.about.en : localization.about.ar}</li></NavLink>
-          <NavLink className={({ isActive }) => (isActive) ? 'acctive' : 'fs-5 CustomText'} to="favorites" dir={language == 'en' ? 'ltr' : 'rtl'}><li className='li mx-2'>{language == 'en' ? localization.favorites.en : localization.favorites.ar} <span className='badge bg-badge'>{counter}</span></li></NavLink>
-          <NavLink className={({ isActive }) => (isActive) ? 'acctive' : 'fs-5 CustomText'} to="login"><li className='li mx-2'>{language == 'en' ? localization.login.en : localization.login.ar}</li></NavLink>
-          <NavLink className={({ isActive }) => (isActive) ? 'acctive' : 'fs-5 CustomText'} to="register"><li className='li mx-2'>{language == 'en' ? localization.register.en : localization.register.ar}</li></NavLink>
+          <NavLink className={({ isActive }) => (isActive) ? 'acctive' : 'fs-5 CustomText'} to="/about"><li className='li mx-2'>{language == 'en' ? localization.about.en : localization.about.ar}</li></NavLink>
+          <NavLink className={({ isActive }) => (isActive) ? 'acctive' : 'fs-5 CustomText'} to="/favorites" dir={language == 'en' ? 'ltr' : 'rtl'}><li className='li mx-2'>{language == 'en' ? localization.favorites.en : localization.favorites.ar} <span className='badge bg-badge'>{counter}</span></li></NavLink>
+          <NavLink className={({ isActive }) => (isActive) ? 'acctive' : 'fs-5 CustomText'} to="/login"><li className='li mx-2'>{language == 'en' ? localization.login.en : localization.login.ar}</li></NavLink>
+          <NavLink className={({ isActive }) => (isActive) ? 'acctive' : 'fs-5 CustomText'} to="/register"><li className='li mx-2'>{language == 'en' ? localization.register.en : localization.register.ar}</li></NavLink>
         </ul>
         <div className='form-check form-switch mt-lg-2 mt-sm-0'>
           <input className="form-check-input"

@@ -12,6 +12,7 @@ import NotFound from './pages/notFound/NotFound'
 import Home from './pages/home/Home'
 import { Provider } from 'react-redux'
 import  store  from './store/store'
+import Details from './pages/details/Details'
 const router = createBrowserRouter([
   {
     path: '/',
